@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="732.0" prefWidth="913.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homebook3.HomeBook3Controller">
+   <children>
+      <HBox layoutY="20.0" prefHeight="48.0" prefWidth="912.0" spacing="8.0">
+         <children>
+            <TextField fx:id="txtSerialno" prefHeight="37.0" prefWidth="66.0" promptText="번호" />
+            <ComboBox fx:id="comboUserid" prefHeight="37.0" prefWidth="150.0" promptText="아이디" />
+            <DatePicker fx:id="dateDay" prefHeight="37.0" promptText="날짜" />
+            <ComboBox fx:id="comboSection" prefHeight="37.0" prefWidth="113.0" promptText="수입/지출" />
+            <ComboBox fx:id="comboTitleid" prefHeight="37.0" prefWidth="145.0" promptText="내역" />
+            <TextField fx:id="txtRevenue" prefHeight="37.0" prefWidth="161.0" promptText="수입금액" />
+            <TextField fx:id="txtExpense" prefHeight="37.0" prefWidth="161.0" promptText="지출금액" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="68.0" prefHeight="48.0" prefWidth="759.0" spacing="5.0">
+         <children>
+            <TextArea fx:id="txtRemark" prefHeight="38.0" prefWidth="757.0" promptText="세부내역" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="662.0" prefHeight="70.0" prefWidth="912.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#update" prefHeight="42.0" prefWidth="83.0" text="수정" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#delete" prefHeight="42.0" prefWidth="83.0" text="삭제" />
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#search" prefHeight="42.0" prefWidth="83.0" text="검색" />
+            <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#accountRegist" prefHeight="42.0" prefWidth="83.0" text="내역등록" />
+            <Label fx:id="labelId" alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="83.0" />
+            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="83.0" text="로그아웃" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="756.0" layoutY="68.0" prefHeight="48.0" prefWidth="90.0" spacing="5.0">
+         <children>
+            <Button fx:id="btnRegist" mnemonicParsing="false" onAction="#regist" prefHeight="40.0" prefWidth="82.0" text="등록" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="table" layoutY="119.0" onMouseReleased="#selectRow" prefHeight="543.0" prefWidth="912.0">
+        <columns>
+          <TableColumn fx:id="colSerialno" prefWidth="48.0" text="번호" />
+          <TableColumn fx:id="colUserid" prefWidth="108.0" text="아이디" />
+            <TableColumn fx:id="colDay" prefWidth="131.0" text="날짜" />
+            <TableColumn fx:id="colSection" prefWidth="63.0" text="수입/지출" />
+            <TableColumn fx:id="colTitleid" prefWidth="104.0" text="내역" />
+            <TableColumn fx:id="colRevenue" prefWidth="110.0" text="수입금액" />
+            <TableColumn fx:id="colExpense" prefWidth="110.0" text="지출금액" />
+            <TableColumn fx:id="colRemark" prefWidth="237.0" text="세부내역" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

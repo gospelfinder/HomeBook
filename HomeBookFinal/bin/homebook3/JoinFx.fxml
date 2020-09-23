@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="780.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homebook3.MemberJoinController">
+   <children>
+      <HBox alignment="CENTER" layoutX="199.0" layoutY="27.0" prefHeight="46.0" prefWidth="385.0">
+         <children>
+            <Label fx:id="labJoin" text="Sign up for HomeBook">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" layoutX="234.0" layoutY="73.0" prefHeight="388.0" prefWidth="313.0" spacing="20.0">
+         <children>
+            <Label fx:id="labId" text="아이디">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtUserid" prefHeight="33.0" prefWidth="137.0" promptText="ID" />
+            <Label fx:id="labName" text="비밀번호">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <PasswordField fx:id="txtPassword" prefHeight="33.0" prefWidth="137.0" promptText="PASSWORD" />
+            <Label fx:id="LabPhone" text="이름">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtUsername" prefHeight="33.0" prefWidth="137.0" promptText="NAME" />
+            <Label fx:id="LabPassword" text="핸드폰번호">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="txtPhone" prefHeight="33.0" prefWidth="137.0" promptText="CELLNUMBER" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="223.0" layoutY="461.0" prefHeight="54.0" prefWidth="336.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#delete" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: lightgray;" text="취소" />
+            <Button fx:id="btnJoin" mnemonicParsing="false" onAction="#join" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: lightgreen;" text="가입하기" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="547.0" layoutY="126.0" prefHeight="46.0" prefWidth="79.0">
+         <children>
+            <Button fx:id="btnSameIdSearch" mnemonicParsing="false" onAction="#sameIdSearch" prefHeight="35.0" prefWidth="70.0" text="중복확인" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="545.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homebook3.AccountTitleController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="382.0" layoutY="119.0" prefHeight="233.0" prefWidth="351.0" spacing="30.0">
+         <children>
+            <Label fx:id="labelAccount" text="Account Title">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAccountid" prefHeight="42.0" prefWidth="119.0" promptText="AccountID" />
+            <TextField fx:id="txtAccounttitle" prefHeight="42.0" promptText="AccountTitle" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <TableView fx:id="accountTable" onMouseReleased="#selectRow" prefHeight="576.0" prefWidth="324.0">
+        <columns>
+          <TableColumn fx:id="colAccountid" prefWidth="162.0" text="AccountID" />
+          <TableColumn fx:id="colAccounttitle" prefWidth="162.0" text="AccountTitle" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="367.0" layoutY="366.0" prefHeight="55.0" prefWidth="381.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#accountUpdate" prefHeight="38.0" prefWidth="70.0" text="수정" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#accountDelete" prefHeight="38.0" prefWidth="70.0" text="삭제" />
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#accountSearch" prefHeight="38.0" prefWidth="70.0" text="검색" />
+            <Button fx:id="btnRegest" mnemonicParsing="false" onAction="#accountRegest" prefHeight="38.0" prefWidth="70.0" text="등록" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="372.0" layoutY="442.0" prefHeight="55.0" prefWidth="371.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnReturnTo" mnemonicParsing="false" onAction="#returnTo" prefHeight="38.0" prefWidth="70.0" text="돌아가기" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
